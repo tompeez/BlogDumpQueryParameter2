@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="BDQP2AppModule"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="DepartmentsView1"
+    ViewObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.DepartmentsView"/>
+  <ViewUsage
+    Name="EmployeesView1"
+    ViewObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.EmployeesView"/>
+  <ViewUsage
+    Name="CountriesView1"
+    ViewObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.CountriesView"/>
+  <ViewUsage
+    Name="RegionsView1"
+    ViewObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.RegionsView"/>
+  <ViewUsage
+    Name="EmployeesView2"
+    ViewObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.EmployeesView"/>
+  <ViewUsage
+    Name="EmployeesView3"
+    ViewObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.EmployeesView"/>
+  <ViewUsage
+    Name="DepartmentsView2"
+    ViewObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.DepartmentsView"/>
+  <ViewUsage
+    Name="CountriesView2"
+    ViewObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.CountriesView"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.links.EmpManagerFkLink"
+    SrcViewUsageName="de.hahn.blog.dumpqueryparameter2.model.adfbc.facade.BDQP2AppModule.EmployeesView1"
+    DstViewUsageName="de.hahn.blog.dumpqueryparameter2.model.adfbc.facade.BDQP2AppModule.EmployeesView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="EmpDeptFkLink1"
+    ViewLinkObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.links.EmpDeptFkLink"
+    SrcViewUsageName="de.hahn.blog.dumpqueryparameter2.model.adfbc.facade.BDQP2AppModule.DepartmentsView1"
+    DstViewUsageName="de.hahn.blog.dumpqueryparameter2.model.adfbc.facade.BDQP2AppModule.EmployeesView3"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="DeptMgrFkLink1"
+    ViewLinkObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.links.DeptMgrFkLink"
+    SrcViewUsageName="de.hahn.blog.dumpqueryparameter2.model.adfbc.facade.BDQP2AppModule.EmployeesView1"
+    DstViewUsageName="de.hahn.blog.dumpqueryparameter2.model.adfbc.facade.BDQP2AppModule.DepartmentsView2"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="CountrRegFkLink1"
+    ViewLinkObjectName="de.hahn.blog.dumpqueryparameter2.model.adfbc.views.CountrRegFkLink"
+    SrcViewUsageName="de.hahn.blog.dumpqueryparameter2.model.adfbc.facade.BDQP2AppModule.RegionsView1"
+    DstViewUsageName="de.hahn.blog.dumpqueryparameter2.model.adfbc.facade.BDQP2AppModule.CountriesView2"
+    Reversed="false"/>
+</AppModule>
